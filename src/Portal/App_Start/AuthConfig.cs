@@ -4,7 +4,7 @@
 namespace Microsoft.WhiteSpaces.Portal
 {
     using DotNetOpenAuth.AspNet;
-    using Microsoft.Practices.Unity;
+    using Unity;
     using Microsoft.Web.WebPages.OAuth;
     using Microsoft.WhiteSpaces.Common;
 

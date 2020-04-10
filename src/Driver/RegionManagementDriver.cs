@@ -10,7 +10,7 @@ namespace Microsoft.Whitespace.Driver
     using System.Linq;
     using System.Text;
     using Common.ValueProviders;
-    using Microsoft.Practices.Unity;
+    using Unity;
     using Microsoft.Whitespace.Common;
     using Microsoft.Whitespace.Common.Utilities;
     using Microsoft.Whitespace.Entities;

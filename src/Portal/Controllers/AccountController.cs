@@ -11,7 +11,7 @@ namespace Microsoft.WhiteSpaces.Portal
     using System.Web.Mvc;
     using System.Web.Security;    
     using DotNetOpenAuth.AspNet;
-    using Microsoft.Practices.Unity;
+    using Unity;
     using Microsoft.Web.WebPages.OAuth;
     using Microsoft.Whitespace.Common;
     using Microsoft.WhiteSpaces.AzureOAuthProvider;

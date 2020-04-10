@@ -7,12 +7,14 @@ namespace Microsoft.WhiteSpaces.Portal
     using System.Web.Mvc;
     using DotNetOpenAuth.AspNet;
     using Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling;
-    using Microsoft.Practices.Unity;
+    using Unity;
     using Microsoft.WhiteSpaces.AzureOAuthProvider;
     using Microsoft.WhiteSpaces.BusinessManager;
     using Microsoft.WhiteSpaces.Common;
     using Microsoft.WhiteSpaces.DataAccessManager;
     using Unity.Mvc5;
+    using Unity.Injection;
+    using Unity.Lifetime;
 
     /// <summary>
     /// Configures Unity

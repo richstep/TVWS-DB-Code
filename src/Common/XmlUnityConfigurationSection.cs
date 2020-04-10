@@ -9,7 +9,7 @@ namespace Microsoft.Whitespace.Common
     using System.Text;
     using System.Threading.Tasks;
     using System.Xml;
-    using Microsoft.Practices.Unity.Configuration;
+
 
     /// <summary>
     /// A configuration section describing configuration for 
@@ -22,7 +22,7 @@ namespace Microsoft.Whitespace.Common
     /// installation.  To get around this limitation, the XmlUnityConfigurationSection
     /// exposes the deserialize method.  
     /// </remarks>
-    public class XmlUnityConfigurationSection : UnityConfigurationSection
+    public class XmlUnityConfigurationSection
     {
         /// <summary>
         /// Deserialize from xml reader.
@@ -30,7 +30,8 @@ namespace Microsoft.Whitespace.Common
         /// <param name="reader">Xml source (can be from any stream).</param>
         public void DeserializeFromXml(XmlReader reader)
         {
-            this.DeserializeSection(reader);
+           // this.DeserializeSection(reader);
+            this.DeserializeFromXml(reader);
         }
     }
 }

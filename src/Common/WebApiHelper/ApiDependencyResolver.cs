@@ -9,7 +9,7 @@ namespace Microsoft.Whitespace.Common.WebApiHelper
     using System.Text;
     using System.Threading.Tasks;
     using System.Web.Http.Dependencies;
-    using Microsoft.Practices.Unity;
+    using Unity;
 
     /// <summary>
     /// to resolve API dependencies

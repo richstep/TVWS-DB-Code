@@ -8,7 +8,7 @@ namespace Microsoft.WhiteSpaces.Portal.Controllers
     using System.Linq;
     using System.Web;
     using System.Web.Mvc;
-    using Microsoft.Practices.Unity;
+    using Unity;
     using Microsoft.Whitespace.Common;
     using Microsoft.WhiteSpaces.BusinessManager;
     using Microsoft.WhiteSpaces.Common;    

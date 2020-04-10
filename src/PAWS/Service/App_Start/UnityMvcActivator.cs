@@ -1,41 +1,38 @@
-// Copyright (c) Microsoft Corporation. All rights reserved.
-// Licensed under the MIT License.
+using System.Linq;
+using System.Web.Mvc;
+
+using Unity.AspNet.Mvc;
+
+[assembly: WebActivatorEx.PreApplicationStartMethod(typeof(Microsoft.Whitespace.PAWS.Service.UnityMvcActivator), nameof(Microsoft.Whitespace.PAWS.Service.UnityMvcActivator.Start))]
+[assembly: WebActivatorEx.ApplicationShutdownMethod(typeof(Microsoft.Whitespace.PAWS.Service.UnityMvcActivator), nameof(Microsoft.Whitespace.PAWS.Service.UnityMvcActivator.Shutdown))]
 
 namespace Microsoft.Whitespace.PAWS.Service
 {
-    using System.Linq;
-    using System.Web.Helpers;
-    using System.Web.Http;
-    using System.Web.Mvc;
-    using Entities;
-    using Microsoft.Practices.Unity.Mvc;
-    using Microsoft.Whitespace.Common;
-    using Microsoft.Whitespace.Common.WebApiHelper;
-    using Newtonsoft.Json.Serialization;
-
     /// <summary>
-    /// Unity Activation for MVC
+    /// Provides the bootstrapping for integrating Unity with ASP.NET MVC.
     /// </summary>
     public static class UnityMvcActivator
     {
-        /// <summary>B
-        /// calls Start 
+        /// <summary>
+        /// Integrates Unity when the application starts.
         /// </summary>
-        public static void Start()
+        public static void Start() 
         {
-            var container = Utils.Configuration.CurrentContainer;
-
             FilterProviders.Providers.Remove(FilterProviders.Providers.OfType<FilterAttributeFilterProvider>().First());
-            FilterProviders.Providers.Add(new UnityFilterAttributeFilterProvider(container));
+            FilterProviders.Providers.Add(new UnityFilterAttributeFilterProvider(UnityConfig.Container));
 
-            DependencyResolver.SetResolver(new UnityDependencyResolver(container));
+            DependencyResolver.SetResolver(new UnityDependencyResolver(UnityConfig.Container));
 
-            var currentJsonFormatter = GlobalConfiguration.Configuration.Formatters.JsonFormatter;
-            currentJsonFormatter.SerializerSettings.NullValueHandling = JsonSerialization.PawsJsonSerializerSetting.NullValueHandling;
-            currentJsonFormatter.SerializerSettings.DefaultValueHandling = JsonSerialization.PawsJsonSerializerSetting.DefaultValueHandling;
-            currentJsonFormatter.SerializerSettings.ContractResolver = JsonSerialization.PawsJsonSerializerSetting.ContractResolver;
+            // TODO: Uncomment if you want to use PerRequestLifetimeManager
+            // Microsoft.Web.Infrastructure.DynamicModuleHelper.DynamicModuleUtility.RegisterModule(typeof(UnityPerRequestHttpModule));
+        }
 
-            GlobalConfiguration.Configuration.DependencyResolver = new ApiDependencyResolver(container);
+        /// <summary>
+        /// Disposes the Unity container when the application is shut down.
+        /// </summary>
+        public static void Shutdown()
+        {
+            UnityConfig.Container.Dispose();
         }
     }
 }

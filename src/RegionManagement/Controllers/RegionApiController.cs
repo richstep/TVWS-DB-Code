@@ -12,7 +12,7 @@ namespace Microsoft.Whitespace.RegionManagement.Controllers
     using System.Text;
     using System.Web;
     using System.Web.Http;
-    using Microsoft.Practices.Unity;
+    using Unity;
     using Microsoft.Whitespace.Common;
     using Microsoft.Whitespace.Common.Utilities;
     using Microsoft.Whitespace.Entities;
@@ -1986,15 +1986,16 @@ namespace Microsoft.Whitespace.RegionManagement.Controllers
         /// <returns>Boolean value indicating is request from admin tool or not.</returns>
         private bool IsRequestFromAdminUserAgent()
         {
-            if (string.IsNullOrWhiteSpace(UnityMvcActivator.AdminToolProductToken))
-            {
-                return false;
-            }
+            //TODO if (string.IsNullOrWhiteSpace(UnityMvcActivator.AdminToolProductToken))
+            //{
+            //    return false;
+            //}
 
             HttpHeaderValueCollection<ProductInfoHeaderValue> userAgents = this.Request.Headers.UserAgent;
 
             // Note: Check if, product token obtained from the current request matches with configured internal admin/developer tool product token.
-            return userAgents != null && userAgents.Any(productInfoHeader => string.Compare(productInfoHeader.Product.Name, UnityMvcActivator.AdminToolProductToken, StringComparison.OrdinalIgnoreCase) == 0);
+            //TODO return userAgents != null && userAgents.Any(productInfoHeader => string.Compare(productInfoHeader.Product.Name, UnityMvcActivator.AdminToolProductToken, StringComparison.OrdinalIgnoreCase) == 0);
+            return false;
         }
     }
 }

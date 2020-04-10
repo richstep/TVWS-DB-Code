@@ -12,15 +12,14 @@ namespace Microsoft.Whitespace.Common
     using System.Timers;
     using System.Web;
     using System.Xml;
-    using Microsoft.Practices.Unity;
+    using Unity;
     using Microsoft.Whitespace.Common.Utilities;
     using Microsoft.Whitespace.Entities;
     using Microsoft.WindowsAzure.ServiceRuntime;
     using Microsoft.WindowsAzure.Storage;
     using Microsoft.WindowsAzure.Storage.Table;
     using Practices.EnterpriseLibrary.Common.Configuration;
-    using Practices.Unity.Configuration;
-    using Practices.Unity.Configuration.ConfigurationHelpers;
+
 
     /// <summary>
     /// Represents an azure config instance.
@@ -283,7 +282,8 @@ namespace Microsoft.Whitespace.Common
 
             foreach (string containerName in Utils.UnityContainers)
             {
-                streamConfig.Configure(container, containerName.Trim());
+               //TODO streamConfig.Configure(container, containerName.Trim());
+                
             }
 
             this.currentContainer = container;

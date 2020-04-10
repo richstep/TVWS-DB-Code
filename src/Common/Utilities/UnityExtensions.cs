@@ -3,9 +3,12 @@
 
 namespace Microsoft.Whitespace.Common.Utilities
 {
+    using System;
     using System.Collections.Generic;
     using System.Linq;
-    using Microsoft.Practices.Unity;
+    using Unity;
+    using Unity.Registration;
+    using Unity.Resolution;
 
     public static class UnityExtensions
     {
@@ -19,14 +22,21 @@ namespace Microsoft.Whitespace.Common.Utilities
         /// This extension method is a fix for the bug in unity ResolveAll Generic method.
         /// For more details follow the thread at "http://unity.codeplex.com/workitem/3392"
         /// </remarks>
-        public static IEnumerable<T> ResolveAll<T>(this Microsoft.Practices.Unity.IUnityContainer container)
+        public static IEnumerable<T> ResolveAll<T>(this Unity.IUnityContainer container)
         {
-            IEnumerable<ContainerRegistration> names = container.Registrations.Where(registration => registration.RegisteredType == typeof(T));
+
+            // IEnumerable <ContainerRegistration> names = container.Registrations.Where(registration => registration.RegisteredType == typeof(T));
+            IEnumerable<IContainerRegistration> names = container.Registrations.Where(registration => registration.RegisteredType == typeof(T));
+
 
             foreach (ContainerRegistration registration in names)
             {
-                yield return container.Resolve<T>(registration.Name);
+                //TODO yield return container.Resolve<T>(registration.Name);
+                
+
             }
+
+            return null;
         }
     }
 }

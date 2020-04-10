@@ -1,54 +1,38 @@
-// Copyright (c) Microsoft Corporation. All rights reserved.
-// Licensed under the MIT License.
+using System.Linq;
+using System.Web.Mvc;
+
+using Unity.AspNet.Mvc;
+
+[assembly: WebActivatorEx.PreApplicationStartMethod(typeof(Microsoft.Whitespace.RegionManagement.UnityMvcActivator), nameof(Microsoft.Whitespace.RegionManagement.UnityMvcActivator.Start))]
+[assembly: WebActivatorEx.ApplicationShutdownMethod(typeof(Microsoft.Whitespace.RegionManagement.UnityMvcActivator), nameof(Microsoft.Whitespace.RegionManagement.UnityMvcActivator.Shutdown))]
 
 namespace Microsoft.Whitespace.RegionManagement
 {
-    using System.Configuration;
-    using System.Linq;
-    using System.Web.Helpers;
-    using System.Web.Http;
-    using System.Web.Mvc;
-    using Entities;
-    using Microsoft.Practices.Unity.Mvc;
-    using Microsoft.Whitespace.Common;
-    using Microsoft.Whitespace.Common.WebApiHelper;
-    using Microsoft.WindowsAzure.ServiceRuntime;
-    using Newtonsoft.Json.Serialization;
-
     /// <summary>
-    /// Unity Activation for MVC
+    /// Provides the bootstrapping for integrating Unity with ASP.NET MVC.
     /// </summary>
     public static class UnityMvcActivator
     {
-        internal static string AdminToolProductToken { get; set; }
+        /// <summary>
+        /// Integrates Unity when the application starts.
+        /// </summary>
+        public static void Start() 
+        {
+            FilterProviders.Providers.Remove(FilterProviders.Providers.OfType<FilterAttributeFilterProvider>().First());
+            FilterProviders.Providers.Add(new UnityFilterAttributeFilterProvider(UnityConfig.Container));
+
+            DependencyResolver.SetResolver(new UnityDependencyResolver(UnityConfig.Container));
+
+            // TODO: Uncomment if you want to use PerRequestLifetimeManager
+            // Microsoft.Web.Infrastructure.DynamicModuleHelper.DynamicModuleUtility.RegisterModule(typeof(UnityPerRequestHttpModule));
+        }
 
         /// <summary>
-        /// calls Start 
+        /// Disposes the Unity container when the application is shut down.
         /// </summary>
-        public static void Start()
+        public static void Shutdown()
         {
-            if (RoleEnvironment.IsAvailable)
-            {
-                AdminToolProductToken = RoleEnvironment.GetConfigurationSettingValue("AdminToolProductToken");
-            }
-            else
-            {
-                AdminToolProductToken = ConfigurationManager.AppSettings["AdminToolProductToken"];
-            }
-
-            var container = Utils.Configuration.CurrentContainer;
-
-            FilterProviders.Providers.Remove(FilterProviders.Providers.OfType<FilterAttributeFilterProvider>().First());
-            FilterProviders.Providers.Add(new UnityFilterAttributeFilterProvider(container));
-
-            DependencyResolver.SetResolver(new UnityDependencyResolver(container));
-
-            var currentJsonFormatter = GlobalConfiguration.Configuration.Formatters.JsonFormatter;
-            currentJsonFormatter.SerializerSettings.NullValueHandling = JsonSerialization.PawsJsonSerializerSetting.NullValueHandling;
-            currentJsonFormatter.SerializerSettings.DefaultValueHandling = JsonSerialization.PawsJsonSerializerSetting.DefaultValueHandling;
-            currentJsonFormatter.SerializerSettings.ContractResolver = JsonSerialization.PawsJsonSerializerSetting.ContractResolver;
-
-            GlobalConfiguration.Configuration.DependencyResolver = new ApiDependencyResolver(container);
+            UnityConfig.Container.Dispose();
         }
     }
 }

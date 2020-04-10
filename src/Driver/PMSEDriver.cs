@@ -12,7 +12,7 @@ namespace Microsoft.Whitespace.Driver
     using System.Text;
     using System.Xml;
     using System.Xml.Linq;
-    using Microsoft.Practices.Unity;
+    using Unity;
     using Microsoft.Whitespace.Common;
     using Microsoft.Whitespace.Common.Validators;
     using Microsoft.Whitespace.Dalc;

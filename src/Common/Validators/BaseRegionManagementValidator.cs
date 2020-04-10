@@ -9,7 +9,7 @@ namespace Microsoft.Whitespace.Common.Validators
     using Entities;
     using Practices.EnterpriseLibrary.Validation;
     using Practices.EnterpriseLibrary.Validation.Validators;
-    using Practices.Unity;
+    using Unity;
 
     /// <summary>
     /// Class BaseRegionManagementValidator

@@ -8,7 +8,7 @@ namespace Microsoft.Whitespace.Common.ValueProviders
     using System.Linq;
     using System.Reflection;
     using Entities;
-    using Microsoft.Practices.Unity;
+    using Unity;
 
     /// <summary>
     ///     Represents PawsRegionalValueProvider

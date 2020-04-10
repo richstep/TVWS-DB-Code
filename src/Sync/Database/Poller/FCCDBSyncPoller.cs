@@ -13,7 +13,7 @@ namespace Microsoft.Whitespace.Sync.Database.Poller
     using System.Threading;
     using System.Web;
     using System.Xml;
-    using Microsoft.Practices.Unity;
+    using Unity;
     using Microsoft.Whitespace.Common;
     using Microsoft.Whitespace.Entities;
     using Microsoft.Whitespace.Sync.Database.Manager;

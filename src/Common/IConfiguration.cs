@@ -4,7 +4,7 @@
 namespace Microsoft.Whitespace.Common
 {
     using System.Security.Cryptography.X509Certificates;
-    using Microsoft.Practices.Unity;
+    using Unity;
 
     /// <summary>Defines all of the whitespace configuration methods.</summary>
     public interface IConfiguration

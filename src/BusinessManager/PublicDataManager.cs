@@ -8,7 +8,7 @@ namespace Microsoft.WhiteSpaces.BusinessManager
     using System.Diagnostics;
     using System.Text;
     using System.Xml;
-    using Microsoft.Practices.Unity;
+    using Unity;
     using Microsoft.Whitespace.Common;
     using Microsoft.WhiteSpaces.Common;
     using Microsoft.WhiteSpaces.DataAccessManager;

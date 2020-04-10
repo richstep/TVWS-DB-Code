@@ -19,7 +19,7 @@ namespace Microsoft.WhiteSpaces.DataAccessManager
     {
         private readonly IAzureTableOperation azureTableOperations;
 
-        [Microsoft.Practices.Unity.InjectionConstructor]
+        [Unity.InjectionConstructor]
         public UsersDataAccess()
             : this(new AzureTableOperation())
         { 

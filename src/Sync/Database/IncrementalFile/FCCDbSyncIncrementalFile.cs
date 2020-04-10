@@ -8,7 +8,7 @@ namespace Microsoft.Whitespace.Sync.Database.IncrementalFile
     using System.Diagnostics;
     using System.Globalization;
     using System.Threading;
-    using Microsoft.Practices.Unity;
+    using Unity;
     using Microsoft.Whitespace.Common;
     using Microsoft.Whitespace.Entities;
 

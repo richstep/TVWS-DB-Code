@@ -10,7 +10,7 @@ namespace Microsoft.Whitespace.Common.Validators
     using Microsoft.WindowsAzure.Storage.Table;
     using Practices.EnterpriseLibrary.Validation;
     using Practices.EnterpriseLibrary.Validation.Validators;
-    using Practices.Unity;
+    using Unity;
 
     /// <summary>
     /// Class BasePawsValidator

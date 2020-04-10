@@ -17,7 +17,7 @@ namespace Microsoft.Whitespace.Sync.Database.Manager
     using System.Threading.Tasks;
     using System.Xml;
     using System.Xml.Serialization;
-    using Microsoft.Practices.Unity;
+    using Unity;
     using Microsoft.Whitespace.Common;
     using Microsoft.Whitespace.Entities;
     using Microsoft.Whitespace.Entities.Versitcard;

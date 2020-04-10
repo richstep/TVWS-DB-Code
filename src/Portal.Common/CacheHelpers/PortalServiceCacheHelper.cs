@@ -9,7 +9,7 @@ namespace Microsoft.WhiteSpaces.Common.CacheHelpers
     using System.Linq;
     using System.Text.RegularExpressions;
     using System.Timers;
-    using Microsoft.Practices.Unity;
+    using Unity;
     using Microsoft.Whitespace.Common;
     using Microsoft.Whitespace.Common.Utilities;
     using Microsoft.Whitespace.Entities;

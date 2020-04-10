@@ -12,8 +12,8 @@ namespace Microsoft.WhiteSpaces.Common
     using System.Text;
     using System.Threading.Tasks;
     using System.Web;
-    using Microsoft.Practices.Unity;
-    using Microsoft.Practices.Unity.Configuration;
+    using Unity;
+
     using Microsoft.Whitespace.Common;
     using Microsoft.WindowsAzure.ServiceRuntime;    
 

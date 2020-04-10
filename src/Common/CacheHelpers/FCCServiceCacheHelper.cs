@@ -12,7 +12,7 @@ namespace Microsoft.Whitespace.Common.CacheHelpers
     using ApplicationServer.Caching;
     using Entities;
     using Microsoft.WindowsAzure.ServiceRuntime;
-    using Practices.Unity;
+    using Unity;
     using Utilities;
     using WindowsAzure.Storage.Table;
 

@@ -6,8 +6,8 @@ namespace NotificationWorker
     using System;
     using System.Diagnostics;
     using System.Threading;
-    using Microsoft.Practices.Unity;
-    using Microsoft.Practices.Unity.Configuration;        
+    using Unity;
+     
     using Microsoft.Whitespace.Common;
     using Microsoft.Whitespace.Dalc;
     using Microsoft.Whitespace.Entities;
@@ -15,7 +15,10 @@ namespace NotificationWorker
     using Microsoft.WhiteSpaces.BusinessManager;
     using Microsoft.WhiteSpaces.DataAccessManager;
     using Microsoft.WindowsAzure.Diagnostics;
-    using Microsoft.WindowsAzure.ServiceRuntime;    
+    using Microsoft.WindowsAzure.ServiceRuntime;
+    using Unity.Lifetime;
+    using Unity.Injection;
+
 
     public class WorkerRole : RoleEntryPoint
     {
@@ -34,7 +37,8 @@ namespace NotificationWorker
             try
             {
                 IUnityContainer container = Utils.Configuration.CurrentContainer;
-                container.LoadConfiguration();
+               //TODO container.LoadConfiguration();
+      
 
                 container.RegisterType<IHttpClientManager, HttpClientManager>(
                 new PerThreadLifetimeManager(),

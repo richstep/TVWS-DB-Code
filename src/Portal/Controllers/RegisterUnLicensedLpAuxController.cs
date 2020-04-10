@@ -6,7 +6,7 @@ namespace Microsoft.WhiteSpaces.Portal.Controllers
     using System;
     using System.Diagnostics;
     using System.Web.Mvc;
-    using Microsoft.Practices.Unity;
+    using Unity;
     using Microsoft.Whitespace.Common;
     using Microsoft.Whitespace.Entities;
     using Microsoft.WhiteSpaces.AzureOAuthProvider;

@@ -6,7 +6,7 @@ namespace Microsoft.WhiteSpaces.BusinessManager
     using System;
     using System.Threading.Tasks;
     using Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling;
-    using Microsoft.Practices.Unity;
+    using Unity;
     using Microsoft.Whitespace.Common;
 
     public class HttpClientTransientErrorDetectionStrategy : ITransientErrorDetectionStrategy

@@ -8,7 +8,7 @@ namespace Microsoft.Whitespace.PAWS.Manager
     using System.Configuration;
     using System.Diagnostics;
     using System.Linq;
-    using Microsoft.Practices.Unity;
+    using Unity;
     using Microsoft.Whitespace.Common;
     using Microsoft.Whitespace.Entities;
 

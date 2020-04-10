@@ -20,7 +20,7 @@ namespace Microsoft.Whitespace.Sync.Region
     using System.Security.Cryptography;
     using System.Text;
     using System.Xml.Linq;
-    using Microsoft.Practices.Unity;
+    using Unity;
     using Microsoft.Whitespace.Common;
     using Microsoft.Whitespace.Common.Utilities;
     using Microsoft.Whitespace.Entities;

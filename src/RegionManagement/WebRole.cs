@@ -8,7 +8,7 @@ namespace Microsoft.Whitespace.RegionManagement
     using System.IO;
     using Common;
     using Common.Utilities;
-    using Microsoft.Practices.Unity;
+    using Unity;
     using WindowsAzure.Diagnostics;
     using WindowsAzure.ServiceRuntime;
    

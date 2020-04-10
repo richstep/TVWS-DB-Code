@@ -10,7 +10,7 @@ namespace Microsoft.WhiteSpaces.Portal
     using System.Linq;
     using System.Web;
     using System.Xml.Linq;
-    using Microsoft.Practices.Unity;       
+    using Unity;       
     using Microsoft.WhiteSpaces.AzureOAuthProvider;
     using Microsoft.WhiteSpaces.AzureTableAccess;
     using Microsoft.WhiteSpaces.Common;         

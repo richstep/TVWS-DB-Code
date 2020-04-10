@@ -18,7 +18,7 @@ namespace Microsoft.WhiteSpaces.AzureOAuthProvider
     {
         private readonly IAzureTableOperation azureTableOperations;
 
-        [Microsoft.Practices.Unity.InjectionConstructor]
+        [Unity.InjectionConstructor]
         public UserManager()
             : this(new AzureTableOperation())
         { 

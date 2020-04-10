@@ -9,7 +9,7 @@ namespace Microsoft.Whitespace.Dalc
     using System.Diagnostics;
     using System.Linq;
     using System.Threading;
-    using Microsoft.Practices.Unity;
+    using Unity;
     using Microsoft.Whitespace.Common;
     using Microsoft.Whitespace.Entities;
     using Microsoft.WindowsAzure.Storage;
@@ -897,7 +897,7 @@ using System.Linq.Expressions;
                 CloudBlockBlob blockBlob = blobContainerTo.GetBlockBlobReference(blockBlobSource.Name);
                 if (currentBlobName != blockBlobSource.Name)
                 {
-                    blockBlob.BeginStartCopyFromBlob(blockBlobSource, null, null);
+                    blockBlob.BeginStartCopy(blockBlobSource, null, null);
                     blockBlobSource.Delete();
                 }
             }
@@ -929,7 +929,8 @@ using System.Linq.Expressions;
             CloudBlobContainer blobContainerTo = blobClientTarget.GetContainerReference(targetContainer);
             CloudBlockBlob blockBlobSource = blobContainerFrom.GetBlockBlobReference(blobName);
             CloudBlockBlob blockBlob = blobContainerTo.GetBlockBlobReference(blobName);
-            blockBlob.StartCopyFromBlob(blockBlobSource);
+            blockBlob.StartCopy(blockBlobSource);
+
             blockBlobSource.Delete();
 
             return true;

@@ -9,12 +9,12 @@ namespace Microsoft.Whitespace.DTTSync
     using System.IO;
     using System.IO.Compression;
     using System.Linq;
-    using Microsoft.Practices.Unity;
+    using Unity;
     using Microsoft.Whitespace.Common;
     using Microsoft.Whitespace.Common.Utilities;
     using Microsoft.Whitespace.Entities;
     using Microsoft.WindowsAzure.Storage.Blob;
-    using Practices.ObjectBuilder2;
+   
     using WindowsAzure.Storage.Table;
 
     /// <summary>

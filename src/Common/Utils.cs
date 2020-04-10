@@ -23,7 +23,7 @@ namespace Microsoft.Whitespace.Common
     using Microsoft.Whitespace.Entities;
     using Microsoft.WindowsAzure.Diagnostics;
     using Microsoft.WindowsAzure.ServiceRuntime;
-    using Practices.Unity.Configuration.ConfigurationHelpers;
+ 
 
     /// <summary>
     /// Static helper class used to access the configuration store.

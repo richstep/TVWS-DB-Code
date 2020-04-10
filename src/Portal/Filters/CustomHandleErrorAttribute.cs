@@ -10,7 +10,7 @@ namespace Microsoft.WhiteSpaces.Portal
     using System.Web;
     using System.Web.Mvc;
     using System.Web.Routing;
-    using Microsoft.Practices.Unity;
+    using Unity;
     using Microsoft.Whitespace.Common;        
     using Microsoft.WhiteSpaces.AzureOAuthProvider;
     using Microsoft.WhiteSpaces.BusinessManager;

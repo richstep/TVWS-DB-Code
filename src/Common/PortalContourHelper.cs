@@ -9,7 +9,7 @@ namespace Microsoft.Whitespace.Common
     using Microsoft.Whitespace.Entities;
     using Microsoft.Whitespace.Common.Utilities;
     using System.Text;
-    using Microsoft.Practices.Unity;
+    using Unity;
     using System.Diagnostics;
 
     /// <summary>

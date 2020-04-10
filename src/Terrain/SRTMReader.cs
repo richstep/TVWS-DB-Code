@@ -7,7 +7,7 @@ namespace Microsoft.Whitespace.Terrain
     using System.Collections.Generic;
     using System.Diagnostics;
     using System.IO;
-    using Microsoft.Practices.Unity;
+    using Unity;
     using Microsoft.Whitespace.Common;
     using Microsoft.Whitespace.Entities;
 

@@ -18,7 +18,7 @@ namespace Microsoft.Whitespace.Driver
     using System.Threading.Tasks;
     using System.Xml;
     using System.Xml.Linq;
-    using Microsoft.Practices.Unity;
+    using Unity;
     using Microsoft.Whitespace.Common;
     using Microsoft.Whitespace.Common.Utilities;
     using Microsoft.Whitespace.Common.ValueProviders;

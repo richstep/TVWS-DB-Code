@@ -9,7 +9,7 @@ namespace Microsoft.Whitespace.Dalc
     using System.Globalization;
     using System.IO;
     using System.Linq;
-    using Microsoft.Practices.Unity;
+    using Unity;
     using Microsoft.Whitespace.Common;
     using Microsoft.Whitespace.Common.Utilities;
     using Microsoft.Whitespace.Entities;

@@ -1,2 +1,0 @@
-C:\work\TVWS_FCC_OFCOM\src\external\WhitespaceFCC\bin\Release\ServiceConfiguration.cscfg
-C:\work\TVWS_FCC_OFCOM\src\external\WhitespaceFCC\bin\Release\ServiceDefinition.csdef

@@ -7,7 +7,7 @@ namespace Microsoft.Whitespace.PAWS.Service.Controllers
     using System.Diagnostics;
     using System.Net.Http;
     using System.Web.Http;
-    using Microsoft.Practices.Unity;
+    using Unity;
     using Microsoft.Whitespace.Common;
     using Microsoft.Whitespace.Entities;
     using Microsoft.Whitespace.PAWS.Service.ActionFilters;

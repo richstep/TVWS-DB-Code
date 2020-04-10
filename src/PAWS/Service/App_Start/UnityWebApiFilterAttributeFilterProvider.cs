@@ -9,7 +9,7 @@ namespace Microsoft.Whitespace.PAWS.Service.App_Start
     using System.Web.Http;
     using System.Web.Http.Controllers;
     using System.Web.Http.Filters;
-    using Microsoft.Practices.Unity;
+    using Unity;
     using Microsoft.Whitespace.Common.Utilities;
 
     public class UnityWebApiFilterAttributeFilterProvider : ActionDescriptorFilterProvider, IFilterProvider

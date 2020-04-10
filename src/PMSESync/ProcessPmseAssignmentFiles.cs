@@ -14,7 +14,7 @@ namespace Microsoft.Whitespace.PmseSync
     using System.Security.Cryptography.Pkcs;
     using System.Security.Cryptography.X509Certificates;
     using Microsoft.Exchange.WebServices.Data;
-    using Microsoft.Practices.Unity;
+    using Unity;
     using Microsoft.Whitespace.Common;
     using Microsoft.Whitespace.Common.Utilities;
     using Microsoft.Whitespace.Entities;

@@ -12,7 +12,7 @@ namespace Microsoft.Whitespace.Sync.Database.File
     using System.Text;
     using System.Threading;
     using System.Threading.Tasks;
-    using Microsoft.Practices.Unity;
+    using Unity;
     using Microsoft.Whitespace.Common;
     using Microsoft.Whitespace.Entities;
     using Microsoft.Whitespace.Sync;

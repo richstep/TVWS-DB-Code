@@ -11,7 +11,7 @@ namespace Microsoft.Whitespace.RegionManagement
     using System.Web;
     using System.Web.Http;
     using System.Web.Http.Controllers;
-    using Microsoft.Practices.Unity;
+    using Unity;
     using Microsoft.Whitespace.Common;
     using OAuthProvider = Microsoft.WhiteSpaces.AzureOAuthProvider;
 
@@ -84,15 +84,17 @@ namespace Microsoft.Whitespace.RegionManagement
         /// <returns>Boolean value indicating is request from admin tool or not.</returns>
         private bool IsRequestFromAdminUserAgent(HttpActionContext actionContext)
         {
-            if (string.IsNullOrWhiteSpace(UnityMvcActivator.AdminToolProductToken))
-            {
-                return false;
-            }
+            //TODO if (string.IsNullOrWhiteSpace(UnityMvcActivator.AdminToolProductToken))
+            //{
+            //    return false;
+            //}
 
             HttpHeaderValueCollection<ProductInfoHeaderValue> userAgents = actionContext.Request.Headers.UserAgent;
 
             // Note: Check if, product token obtained from the current request matches with configured internal admin/developer tool product token.
-            return userAgents != null && userAgents.Any(productInfoHeader => string.Compare(productInfoHeader.Product.Name, UnityMvcActivator.AdminToolProductToken, StringComparison.OrdinalIgnoreCase) == 0);
-        }
+            //TODO return userAgents != null && userAgents.Any(productInfoHeader => string.Compare(productInfoHeader.Product.Name, UnityMvcActivator.AdminToolProductToken, StringComparison.OrdinalIgnoreCase) == 0);
+
+            return false;
+                }
     }
 }

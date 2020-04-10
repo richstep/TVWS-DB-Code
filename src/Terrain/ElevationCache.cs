@@ -13,7 +13,7 @@ namespace Microsoft.Whitespace.Terrain
     using System.Text;
     using System.Threading.Tasks;
     using Microsoft.ApplicationServer.Caching;
-    using Microsoft.Practices.Unity;
+    using Unity;
     using Microsoft.Whitespace.Common;
     using Microsoft.Whitespace.Common.Utilities;
     using Microsoft.Whitespace.Entities;

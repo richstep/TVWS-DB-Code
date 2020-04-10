@@ -13,7 +13,7 @@ namespace Microsoft.Whitespace.RegionCalculation
     using System.Text;
     using System.Threading.Tasks;
     using Common.CacheHelpers;
-    using Microsoft.Practices.Unity;
+    using Unity;
     using Microsoft.Whitespace.Common;
     using Microsoft.Whitespace.Common.Utilities;
     using Microsoft.Whitespace.Entities;

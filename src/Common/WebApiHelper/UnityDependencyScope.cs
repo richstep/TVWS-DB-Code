@@ -7,7 +7,7 @@ namespace Microsoft.Whitespace.Common.WebApiHelper
     using System.Collections.Generic;
     using System.Runtime.InteropServices;
     using System.Web.Http.Dependencies;
-    using Microsoft.Practices.Unity;
+    using Unity;
 
     /// <summary>
     /// unity Dependency scope for API Dependency resolver

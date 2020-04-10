@@ -4,7 +4,7 @@
 namespace Microsoft.Whitespace.Common
 {
     using System.Linq;
-    using Practices.Unity;
+    using Unity;
 
     /// <summary>
     ///     Represents Class DatabaseCache.

@@ -11,7 +11,7 @@ namespace Microsoft.Whitespace.Sync.Database.File
     using System.Linq;
     using System.Net;
     using System.Threading;
-    using Microsoft.Practices.Unity;
+    using Unity;
     using Microsoft.Whitespace.Common;
     using Microsoft.Whitespace.Common.Utilities;
     using Microsoft.WindowsAzure;

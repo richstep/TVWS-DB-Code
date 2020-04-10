@@ -20,7 +20,7 @@ namespace Microsoft.WhiteSpaces.BusinessManager
     using Microsoft.WhiteSpaces.Common.Enums;
     using Microsoft.WhiteSpaces.DataAccessManager;
     using Microsoft.WindowsAzure.ServiceRuntime;
-    using Microsoft.Practices.Unity;
+    using Unity;
     using Microsoft.Whitespace.Common;
 
     public class RegionManager : IRegionManager

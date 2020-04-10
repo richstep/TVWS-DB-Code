@@ -11,7 +11,7 @@ namespace Microsoft.Whitespace.Sync.Region
     using System.Threading;
     using System.Timers;
     using Microsoft.ApplicationServer.Caching;
-    using Microsoft.Practices.Unity;
+    using Unity;
     using Microsoft.Whitespace.Common;
     using Microsoft.Whitespace.Common.Utilities;
     using Microsoft.WindowsAzure.Diagnostics;

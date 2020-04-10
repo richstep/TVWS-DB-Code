@@ -10,7 +10,7 @@ namespace Microsoft.Whitespace.Sync.Database.Service
     using System.ServiceModel;
     using System.Threading;
     using System.Xml;
-    using Microsoft.Practices.Unity;
+    using Unity;
     using Microsoft.Whitespace.Common;
     using Microsoft.Whitespace.Entities;
 

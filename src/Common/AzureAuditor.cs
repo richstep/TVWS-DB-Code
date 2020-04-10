@@ -9,7 +9,8 @@ namespace Microsoft.Whitespace.Common
     using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
-    using Microsoft.Practices.Unity;
+    using Unity;
+    using Unity;
 
     /// <summary>
     /// Default Auditor that writes to an Azure table.

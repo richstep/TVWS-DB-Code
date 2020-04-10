@@ -9,7 +9,7 @@ namespace Microsoft.Whitespace.UserManager
     using System.Linq;
     using Microsoft.Practices.EnterpriseLibrary.Validation;
     using Microsoft.Practices.EnterpriseLibrary.Validation.Validators;
-    using Microsoft.Practices.Unity;
+    using Unity;
     using Microsoft.Whitespace.Common;
     using Microsoft.Whitespace.Entities;
 

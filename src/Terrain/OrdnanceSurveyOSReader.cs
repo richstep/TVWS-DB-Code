@@ -11,7 +11,7 @@ namespace Microsoft.Whitespace.Terrain
     using System.Linq;
     using System.Text;
     using Common.Utilities;
-    using Microsoft.Practices.Unity;
+    using Unity;
     using Microsoft.Whitespace.Common;
     using Microsoft.Whitespace.Entities;
 

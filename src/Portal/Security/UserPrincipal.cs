@@ -8,7 +8,7 @@ namespace Microsoft.WhiteSpaces.Portal
     using System.Linq;
     using System.Security.Principal;
     using System.Web;
-    using Microsoft.Practices.Unity;
+    using Unity;
     using Microsoft.WhiteSpaces.AzureOAuthProvider;
     using Microsoft.WhiteSpaces.Common;
     using WebMatrix.WebData;

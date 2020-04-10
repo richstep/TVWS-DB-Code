@@ -13,12 +13,13 @@ namespace Microsoft.WhiteSpaces.DataAccessManager
     using Microsoft.WhiteSpaces.Common;
     using Microsoft.WhiteSpaces.Common.Enums;
     using Microsoft.WindowsAzure.Storage.Table;
+    using Unity;
 
     public class RegionDataAccess : IRegionDataAccess
     {
         private IAzureTableOperation azureTableOperations;
 
-        [Microsoft.Practices.Unity.InjectionConstructor]
+        [InjectionConstructor]
         public RegionDataAccess()
             : this(new AzureTableOperation())
         { 

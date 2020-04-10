@@ -10,7 +10,7 @@ namespace Microsoft.Whitespace.Terrain
     using System.IO;
     using System.IO.Compression;
     using System.Linq;
-    using Microsoft.Practices.Unity;
+    using Unity;
     using Microsoft.Whitespace.Common;
     using Microsoft.Whitespace.Entities;
 
